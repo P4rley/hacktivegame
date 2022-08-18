@@ -264,6 +264,15 @@ form input {
 }
 
 #submit {
+  width: 120px;
+  cursor: pointer;
+  background-color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  color: white;
+}
+
+#coba {
   width: 90px;
   cursor: pointer;
   background-color: rgb(141, 64, 64);

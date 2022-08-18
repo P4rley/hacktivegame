@@ -22,3 +22,11 @@ sumbitBtn.onclick = function () {
     announce.className = "show";
   }
 };
+
+let el = document.getElementById("audioNotifikasi"); 
+  function playAudio() { 
+    el.play(); 
+  } 
+  function pauseAudio() { 
+    el.pause(); 
+  } 
