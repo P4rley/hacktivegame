@@ -148,7 +148,14 @@
             <option value="Pria">Pria</option>
             <option value="Wanita">Wanita</option>
           </select>
-          <div id="submit">Sumbit</div>
+          <audio id="audioNotifikasi">
+            <source src="17an.mp3" type="audio/mpeg">
+          </audio>
+          <div id="submit">
+            <button onclick="playAudio()" type="button" id="coba">Submit</button>
+            <br>
+            <button onclick="pauseAudio()" type="button" id="coba">Delete</button>
+          </div>
         </form>
 
         <table class="table">
