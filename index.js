@@ -16,9 +16,36 @@ sumbitBtn.onclick = function () {
   let berat = document.getElementById("weight").value;
   document.getElementById("beratValue").innerHTML = berat;
 
-  let announce = document.getElementById("announce");
+  let newDiv = document.createElement("div");
+  newDiv.className = "cta";
+  newDiv.id = "cta";
+  document.getElementById("book").appendChild(newDiv);
 
-  if (announce.className == "hide") {
-    announce.className = "show";
-  }
+  let newP = document.createElement("p");
+  newP.innerHTML = "Apakah kamu sudah yakin dengan pilihanmu?";
+  newP.className = "sure";
+
+  document.getElementById("cta").appendChild(newP);
+
+  let newSubmit = document.createElement("button");
+  newSubmit.innerText = "Send";
+  newSubmit.className = "ubah-btn";
+  document.getElementById("cta").appendChild(newSubmit);
+
+  let newButton = document.createElement("button");
+  newButton.innerText = "Ubah Pilihan";
+  newButton.className = "ubah-btn";
+  document.getElementById("cta").appendChild(newButton);
+
+  newSubmit.onclick = function () {
+    let announce = document.getElementById("announce");
+
+    if (announce.className == "hide") {
+      announce.className = "show";
+    }
+  };
+
+  newButton.onclick = function () {
+    window.location.reload();
+  };
 };
