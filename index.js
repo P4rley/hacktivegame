@@ -43,6 +43,8 @@ sumbitBtn.onclick = function () {
     if (announce.className == "hide") {
       announce.className = "show";
     }
+
+    newButton.remove();
   };
 
   newButton.onclick = function () {
