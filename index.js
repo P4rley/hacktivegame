@@ -1,24 +1,34 @@
-let sumbitBtn = document.getElementById("submit");
+function getData() {
+  const username = document.getElementById("username").value;
+  const password = document.getElementById("password").value;
+  const confirmPassword = document.getElementById("confirmPassword").value;
 
-sumbitBtn.onclick = function () {
-  let nama = document.getElementById("nama").value;
-  document.getElementById("namaValue").innerHTML = nama;
+  if (password === confirmPassword) {
+    alert("Registrasi kamu berhasil bosku!!!");
 
-  let usia = document.getElementById("usia").value;
-  document.getElementById("usiaValue").innerHTML = usia;
-
-  let lomba = document.getElementById("pilih-permainan").value;
-  document.getElementById("lombaValue").innerHTML = lomba;
-
-  let gender = document.getElementById("jenis-kelamin").value;
-  document.getElementById("genderValue").innerHTML = gender;
-
-  let berat = document.getElementById("weight").value;
-  document.getElementById("beratValue").innerHTML = berat;
-
-  let announce = document.getElementById("announce");
-
-  if (announce.className == "hide") {
-    announce.className = "show";
+    localStorage.setItem("username", username);
+    localStorage.setItem("password", password);
+    localStorage.setItem("confirmPassword", confirmPassword);
+  } else {
+    alert("Password kamu tidak sama bos!!!");
   }
-};
+}
+
+let getAll = localStorage;
+const localUsername = getAll.username;
+const localPassword = getAll.password;
+
+function check() {
+  return true;
+}
+
+document.getElementById("submit-btn").addEventListener("click", function (e) {
+  let username = document.getElementById("username").value;
+  let password = document.getElementById("password").value;
+
+  if (localUsername === username && localPassword === password) {
+    alert("Silahkan masuk bosku!!!");
+  } else {
+    e.preventDefault();
+  }
+});

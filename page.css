@@ -360,3 +360,26 @@ form input {
 .show {
   display: block;
 }
+
+.cta {
+  padding: 0 8rem;
+}
+
+.ubah-btn {
+  margin-top: 1rem;
+  margin-right: 2rem;
+  border: 1px solid rgb(141, 64, 64);
+  outline: none;
+  background-color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-weight: 400;
+  transition: all 0.4s ease-in-out;
+  cursor: pointer;
+}
+
+.ubah-btn:hover {
+  background-color: rgb(141, 64, 64);
+  color: #fff;
+  border: 1px solid #fff;
+}
