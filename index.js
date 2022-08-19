@@ -1,53 +1,34 @@
-let sumbitBtn = document.getElementById("submit");
+function getData() {
+  const username = document.getElementById("username").value;
+  const password = document.getElementById("password").value;
+  const confirmPassword = document.getElementById("confirmPassword").value;
 
-sumbitBtn.onclick = function () {
-  let nama = document.getElementById("nama").value;
-  document.getElementById("namaValue").innerHTML = nama;
+  if (password === confirmPassword) {
+    alert("Registrasi kamu berhasil!!!");
 
-  let usia = document.getElementById("usia").value;
-  document.getElementById("usiaValue").innerHTML = usia;
+    localStorage.setItem("username", username);
+    localStorage.setItem("password", password);
+    localStorage.setItem("confirmPassword", confirmPassword);
+  } else {
+    alert("Password kamu tidak sama!!!");
+  }
+}
 
-  let lomba = document.getElementById("pilih-permainan").value;
-  document.getElementById("lombaValue").innerHTML = lomba;
+let getAll = localStorage;
+const localUsername = getAll.username;
+const localPassword = getAll.password;
 
-  let gender = document.getElementById("jenis-kelamin").value;
-  document.getElementById("genderValue").innerHTML = gender;
+function check() {
+  return true;
+}
 
-  let berat = document.getElementById("weight").value;
-  document.getElementById("beratValue").innerHTML = berat;
+document.getElementById("submit-btn").addEventListener("click", function (e) {
+  let username = document.getElementById("username").value;
+  let password = document.getElementById("password").value;
 
-  let newDiv = document.createElement("div");
-  newDiv.className = "cta";
-  newDiv.id = "cta";
-  document.getElementById("book").appendChild(newDiv);
-
-  let newP = document.createElement("p");
-  newP.innerHTML = "Apakah kamu sudah yakin dengan pilihanmu?";
-  newP.className = "sure";
-
-  document.getElementById("cta").appendChild(newP);
-
-  let newSubmit = document.createElement("button");
-  newSubmit.innerText = "Send";
-  newSubmit.className = "ubah-btn";
-  document.getElementById("cta").appendChild(newSubmit);
-
-  let newButton = document.createElement("button");
-  newButton.innerText = "Ubah Pilihan";
-  newButton.className = "ubah-btn";
-  document.getElementById("cta").appendChild(newButton);
-
-  newSubmit.onclick = function () {
-    let announce = document.getElementById("announce");
-
-    if (announce.className == "hide") {
-      announce.className = "show";
-    }
-
-    newButton.remove();
-  };
-
-  newButton.onclick = function () {
-    window.location.reload();
-  };
-};
+  if (localUsername === username && localPassword === password) {
+    alert("Silahkan masuk bosku!!!");
+  } else {
+    e.preventDefault();
+  }
+});

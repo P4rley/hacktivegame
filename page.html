@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="page.css" />
+    <title>Lomba 17an</title>
+  </head>
+  <body>
+    <nav>
+      <h1 class="logo">Lomba 17an</h1>
+
+      <ul class="nav-links">
+        <li><a href="#home" class="link">Home</a></li>
+        <li><a href="#book" class="link">Register</a></li>
+        <li><a href="index.html" class="link">Logout</a></li>
+      </ul>
+    </nav>
+
+    <div class="hero" id="home">
+      <div class="left">
+        <h1 class="heading">Welcome</h1>
+        <p class="desc">
+          Ingin mendaftar sebagai peserta lomba 17 Agustus? Silahkan scroll
+          kebawah.
+        </p>
+      </div>
+      <div class="right">
+        <img src="images/1.jpg" class="hero-img" alt="" />
+      </div>
+    </div>
+
+    <div class="gallery-container" id="gallery">
+      <ul class="gallery">
+        <li>
+          <a href="#gambar-1">
+            <img src="images/tarik-tambang.jpeg" alt="Tarik Tambang" />
+            <span>Tarik Tambang</span>
+          </a>
+
+          <div class="overlay" id="gambar-1">
+            <a href="#gallery" class="close">x close</a>
+            <a href="#gambar-4" class="prev">prev</a>
+            <img src="images/tarik-tambang.jpeg" alt="Tarik Tambang" />
+            <a href="#gambar-2" class="next">next</a>
+          </div>
+        </li>
+
+        <li>
+          <a href="#gambar-2">
+            <img src="images/balap-karung.jpeg" alt="Balap Karung" />
+            <span>Balap Karung</span>
+          </a>
+
+          <div class="overlay" id="gambar-2">
+            <a href="#gallery" class="close">x close</a>
+            <a href="#gambar-1" class="prev">prev</a>
+            <img src="images/balap-karung.jpeg" alt="Balap Karung" />
+            <a href="#gambar-3" class="next">next</a>
+          </div>
+        </li>
+
+        <li>
+          <a href="#gambar-3">
+            <img src="images/panjat-pinang.jpeg" alt="Panjat Pinang" />
+            <span>Panjat Pinang</span>
+          </a>
+
+          <div class="overlay" id="gambar-3">
+            <a href="#gallery" class="close">x close</a>
+            <a href="#gambar-2" class="prev">prev</a>
+            <img src="images/panjat-pinang.jpeg" alt="Panjat Pinang" />
+            <a href="#gambar-4" class="next">next</a>
+          </div>
+        </li>
+
+        <li>
+          <a href="#gambar-4">
+            <img src="images/makan-kerupuk.jpeg" alt="Makan Krupuk" />
+            <span>Makan Krupuk</span>
+          </a>
+
+          <div class="overlay" id="gambar-4">
+            <a href="#gallery" class="close">x close</a>
+            <a href="#gambar-3" class="prev">prev</a>
+            <img src="images/makan-kerupuk.jpeg" alt="Makan Krupuk" />
+            <a href="#gambar-5" class="next">next</a>
+          </div>
+        </li>
+
+        <li>
+          <a href="#gambar-5">
+            <img src="images/masukan-paku.webp" alt="Memasukkan Paku" />
+            <span>Memasukkan Paku</span>
+          </a>
+
+          <div class="overlay" id="gambar-5">
+            <a href="#gallery" class="close">x close</a>
+            <a href="#gambar-4" class="prev">prev</a>
+            <img src="images/masukan-paku.webp" alt="Memasukkan Paku" />
+            <a href="#gambar-6" class="next">next</a>
+          </div>
+        </li>
+
+        <div class="clear"></div>
+      </ul>
+    </div>
+
+    <div class="book" id="book">
+      <div class="wrapper">
+        <h1 class="subheading">Register</h1>
+
+        <div class="hide" id="announce">
+          <h1 class="annouce-title">Selamat kamu berhasil mendaftar!</h1>
+        </div>
+        <form>
+          <div>
+            <label>Pilih permainan</label>
+            <select class="form-pilih-permainan" id="pilih-permainan">
+              <option selected>Pilih permainan</option>
+              <option value="Tarik Tambang">Tarik Tambang</option>
+              <option value="Panjat Pinang">Panjat pinang</option>
+              <option value="Makan Kerupuk">Lomba Makan Kerupuk</option>
+              <option value="Balap Karing">Balap Karing</option>
+              <option value="Masukin Paku Kedalam Botol">
+                Masukin Paku Kedalam Botol
+              </option>
+            </select>
+          </div>
+          <div>
+            <label for="nama">Nama</label>
+            <input type="text" id="nama" value="" />
+          </div>
+          <div>
+            <label for="usia">Usia</label>
+            <input type="number" id="usia" value="" />
+          </div>
+          <div>
+            <label for="weight">Berat Badan</label>
+            <input type="number" id="weight" value="" />
+          </div>
+          <select class="jenis-kelamin" id="jenis-kelamin">
+            <option selected>Gender</option>
+            <option value="Pria">Pria</option>
+            <option value="Wanita">Wanita</option>
+          </select>
+          <div id="submit">
+            Sumbit
+          </div>
+        </form>
+
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Nama</th>
+              <th>Usia</th>
+              <th>Berat badan</th>
+              <th>Gender</th>
+              <th>Jenis lomba</th>
+            </tr>
+          </thead>
+          <tbody id="tbody">
+            <td id="namaValue"></td>
+            <td id="usiaValue"></td>
+            <td id="beratValue"></td>
+            <td id="genderValue"></td>
+            <td id="lombaValue"></td>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    </div>
+  </body>
+
+  <script src="page.js"></script>
+</html>
