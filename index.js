@@ -29,6 +29,7 @@ document.getElementById("submit-btn").addEventListener("click", function (e) {
   if (localUsername === username && localPassword === password) {
     alert("Silahkan masuk bosku!!!");
   } else {
+    alert("Daftar dulu jadi member bosku!!!");
     e.preventDefault();
   }
 });
