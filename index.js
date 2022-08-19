@@ -4,13 +4,13 @@ function getData() {
   const confirmPassword = document.getElementById("confirmPassword").value;
 
   if (password === confirmPassword) {
-    alert("Registrasi kamu berhasil!!!");
+    alert("Registrasi kamu berhasil bosku!!!");
 
     localStorage.setItem("username", username);
     localStorage.setItem("password", password);
     localStorage.setItem("confirmPassword", confirmPassword);
   } else {
-    alert("Password kamu tidak sama!!!");
+    alert("Password kamu tidak sama bos!!!");
   }
 }
 

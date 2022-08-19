@@ -1,53 +1,54 @@
 let sumbitBtn = document.getElementById("submit");
 
-sumbitBtn.onclick = function () {
+sumbitBtn.onclick = function (e) {
   let nama = document.getElementById("nama").value;
-  document.getElementById("namaValue").innerHTML = nama;
-
   let usia = document.getElementById("usia").value;
-  document.getElementById("usiaValue").innerHTML = usia;
-
   let lomba = document.getElementById("pilih-permainan").value;
-  document.getElementById("lombaValue").innerHTML = lomba;
-
   let gender = document.getElementById("jenis-kelamin").value;
-  document.getElementById("genderValue").innerHTML = gender;
-
   let berat = document.getElementById("weight").value;
-  document.getElementById("beratValue").innerHTML = berat;
 
-  let newDiv = document.createElement("div");
-  newDiv.className = "cta";
-  newDiv.id = "cta";
-  document.getElementById("book").appendChild(newDiv);
+  if (usia > 17) {
+    alert("Lu ketuaan bos ku!!");
+  } else {
+    document.getElementById("namaValue").innerHTML = nama;
+    document.getElementById("usiaValue").innerHTML = usia;
+    document.getElementById("lombaValue").innerHTML = lomba;
+    document.getElementById("genderValue").innerHTML = gender;
+    document.getElementById("beratValue").innerHTML = berat;
 
-  let newP = document.createElement("p");
-  newP.innerHTML = "Apakah kamu sudah yakin dengan pilihanmu?";
-  newP.className = "sure";
+    let newDiv = document.createElement("div");
+    newDiv.className = "cta";
+    newDiv.id = "cta";
+    document.getElementById("book").appendChild(newDiv);
 
-  document.getElementById("cta").appendChild(newP);
+    let newP = document.createElement("p");
+    newP.innerHTML = "Apakah kamu sudah yakin dengan pilihanmu?";
+    newP.className = "sure";
 
-  let newSubmit = document.createElement("button");
-  newSubmit.innerText = "Send";
-  newSubmit.className = "ubah-btn";
-  document.getElementById("cta").appendChild(newSubmit);
+    document.getElementById("cta").appendChild(newP);
 
-  let newButton = document.createElement("button");
-  newButton.innerText = "Ubah Pilihan";
-  newButton.className = "ubah-btn";
-  document.getElementById("cta").appendChild(newButton);
+    let newSubmit = document.createElement("button");
+    newSubmit.innerText = "Send";
+    newSubmit.className = "ubah-btn";
+    document.getElementById("cta").appendChild(newSubmit);
 
-  newSubmit.onclick = function () {
-    let announce = document.getElementById("announce");
+    let newButton = document.createElement("button");
+    newButton.innerText = "Ubah Pilihan";
+    newButton.className = "ubah-btn";
+    document.getElementById("cta").appendChild(newButton);
 
-    if (announce.className == "hide") {
-      announce.className = "show";
-    }
+    newSubmit.onclick = function () {
+      let announce = document.getElementById("announce");
 
-    newButton.remove();
-  };
+      if (announce.className == "hide") {
+        announce.className = "show";
+      }
 
-  newButton.onclick = function () {
-    window.location.reload();
-  };
+      newButton.remove();
+    };
+
+    newButton.onclick = function () {
+      window.location.reload();
+    };
+  }
 };
